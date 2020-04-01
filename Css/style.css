@@ -1,47 +1,88 @@
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-}
-
-/* Container for flexboxes */
-.row {
-    display: -webkit-flex;
+#feed-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
 }
 
-/* Create three equal columns that sits next to each other */
-.column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
+header {
+    width: 100%;
+    height: 120px;
+    background-color: blueviolet;
     text-align: center;
+    line-height: 120px; /* préciser la hateur de la ligne pour que le contenu puisse être aligné au milieu (vertical align)*/
+    font-size: xx-large;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .row {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+
 }
-</style>
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+main {
+    width: 100%;
+    margin: 10px;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: green;
+}
+
+.article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.box {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: black solid 2px;
+}
+
+.image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer {
+    background-color: yellow;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
