@@ -1,8 +1,8 @@
 function fetchAllPosts() {
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => {
-            return response.json();
-        }) // analyser la réponse en JSON
+            return response.json();// analyser la réponse en JSON
+        })
         .then(res => { //retour si resolve
             fillTheSection(res);
             console.log(res);
@@ -15,19 +15,19 @@ function fetchAllPosts() {
 
 function createPost(dataPost) {
     const section = document.createElement("section"); // création d'un élement section
-    section.className = "post box"; //
-    section.style.width = "48%";
+    section.className = "post box"; // ajout class à la section créée
+    section.style.width = "48%"; // taille de la section
     section.style.backgroundColor = "red";
     const title = document.createElement("h2");
     title.style.color = "black";
-    title.innerHTML = dataPost.title.toUpperCase();
-    section.appendChild(title);
+    title.innerHTML = dataPost.title.toUpperCase(); // insérer le titre en maj de notre API dans la balise h2 de notre code html
+    section.appendChild(title); // ajoute un noeud enfant h2 à ma section
     const body = document.createElement("div");
     body.style.color = "white";
     body.innerHTML = dataPost.body;
     title.appendChild(body);
 
-    return section; // balise section > h2 > div vidéo (retourne aussi les enfants)
+    return section; // balises section > h2 > div  (retourne aussi les enfants)
 }
 
 
