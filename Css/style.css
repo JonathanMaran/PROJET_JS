@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
+    background-color: white;
 }
 
 header {
     width: 100%;
     height: 120px;
-    background-color: blueviolet;
+    background-color: white;
     text-align: center;
     line-height: 120px; /* préciser la hateur de la ligne pour que le contenu puisse être aligné au milieu (vertical align)*/
     font-size: xx-large;
@@ -55,7 +55,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    background-color: green;
+    background-color: white;
     flex-wrap: wrap;
 }
 
@@ -66,6 +66,27 @@ main {
     border: black solid 2px;
 }
 
+.container {
+    width: 55%;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+.img-slides {
+    width: 850px;
+    height: 600px;
+}
+
+.slick-dots {
+    background-color: white;
+}
+
+.container .slick-prev:before{
+    color: black;
+}
+.container .slick-next:before{
+    color: black;
+}
 
 footer {
     background-color: yellow;

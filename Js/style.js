@@ -41,3 +41,12 @@ function fillTheSection(data) {// fonction pour manipuler les données récupér
 }
 
 fetchAllPosts();
+
+
+$(document).ready(function () {
+    $('.slides').slick({ // initialiser le carousel
+        speed: 300, // vitesse de défilement du carousel
+        autoplay: true, // lecture auto du carousel
+        dots: true, // petits points indiquant le nombre de photos du carousel
+    })
+});
