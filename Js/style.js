@@ -43,6 +43,7 @@ function fillTheSection(data) {// fonction pour manipuler les données récupér
 fetchAllPosts();
 
 
+// Utilisation du carousel
 $(document).ready(function () {
     $('.slides').slick({ // initialiser le carousel
         speed: 300, // vitesse de défilement du carousel
@@ -50,3 +51,23 @@ $(document).ready(function () {
         dots: true, // petits points indiquant le nombre de photos du carousel
     })
 });
+
+/* Quand l'utilisateur clique sur le boutton,
+basculer entre masquer et afficher le contenu du menu déroulant */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Ferme le menu si l'utilisateur clique en dehors de celui ci
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
