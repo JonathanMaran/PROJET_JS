@@ -59,7 +59,7 @@ function myFunction() {
 }
 
 // Ferme le menu si l'utilisateur clique en dehors de celui ci
-window.onclick = function(event) { //onclick représente le gestionnaire d'évènement onClick de l'élément courant,evenement MouseEvent (intéraction de l'utilisateur avec un appareil de pointage, type souris)
+window.onclick = function (event) { //onclick représente le gestionnaire d'évènement onClick de l'élément courant,evenement MouseEvent (intéraction de l'utilisateur avec un appareil de pointage, type souris)
     if (!event.target.matches('.dropbtn')) {
         let dropdowns = document.getElementsByClassName("dropdown-content"); // on récupère les éléments de la classe dropdown-content
         let i;
@@ -71,3 +71,63 @@ window.onclick = function(event) { //onclick représente le gestionnaire d'évè
         }
     }
 };
+
+//-------------------------------------
+
+
+//FORMULAIRE EVENEMENT
+
+let postArticle = document.querySelector('#submit');
+postArticle.addEventListener('click', function () {
+    let main = document.querySelector("main");
+    let title = document.querySelector("#title").value;
+    let body = document.querySelector("#body").value;
+    console.log(title);
+
+
+    function addArticle(title, body) {
+        let post = {title: title, body: body};
+        return post;
+    }
+
+    let post = addArticle(title, body);
+
+    let createArticle = createPost(post);
+    main.appendChild(createArticle);
+});
+
+// FORMULAIRE
+// function ajout(element){
+//     let formulaire = document.formulaireDynamque;
+//     // On clone le bouton d'ajout
+//     let ajout = element.cloneNode(true);
+//     // Crée un nouvel élément de type "input"
+//     let champ = document.createElement("input");
+//     // Les valeurs encodée dans le formulaire seront stockées dans un tableau
+//     champ.name = "champs[]";
+//     champ.type = "text";
+//
+//     let sup = document.createElement("input");
+//     sup.value = "supprimer un champ";
+//     sup.type = "button";
+//     // Ajout de l'événement onclick
+//     sup.onclick = function onclick(event)
+//     {suppression(this);};
+//
+//     // On crée un nouvel élément de type "p" et on insère le champ l'intérieur.
+//     let bloc = document.createElement("p");
+//     bloc.appendChild(champ);
+//     formulaire.insertBefore(ajout, element);
+//     formulaire.insertBefore(sup, element);
+//     formulaire.insertBefore(bloc, element);
+// }
+//
+// function suppression(element){
+//     var formulaire = document.formulaireDynamque;
+//     // Supprime le bouton d'ajout
+//     formulaire.removeChild(element.previousSibling);
+//     // Supprime le champ
+//     formulaire.removeChild(element.nextSibling);
+//     // Supprime le bouton de suppression
+//     formulaire.removeChild(element);
+// }
