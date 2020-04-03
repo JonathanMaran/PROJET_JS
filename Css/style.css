@@ -54,7 +54,7 @@ header {
     background-color: rgba(51, 51, 51, 0.98);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /*z-index: 1;*/
+    z-index: 1;
 }
 
 /* Links inside the dropdown */
@@ -74,7 +74,7 @@ header {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
-    display: block;
+    display: block; /* type d'affichage utilisé pour le rendu d'un élément,ici en block*/
 }
 
 
