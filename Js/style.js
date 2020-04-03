@@ -99,3 +99,5 @@ postArticle.addEventListener('click', function () { // création d'un événemen
     main.appendChild(createArticle); // je crée un enfant createArticle à mon main (à la suite de mes posts provenant de l'API)
 });
 
+
+
