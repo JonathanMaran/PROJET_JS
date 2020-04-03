@@ -20,10 +20,12 @@ function createPost(dataPost) {
     section.style.backgroundColor = "red";
     const title = document.createElement("h2");
     title.style.color = "black";
+    title.className = "title"
     title.innerHTML = dataPost.title.toUpperCase(); // insérer le titre en maj de notre API dans la balise h2 de notre code html
     section.appendChild(title); // ajoute un noeud enfant h2 à ma section
     const body = document.createElement("div");
     body.style.color = "white";
+    body.className = "body";
     body.innerHTML = dataPost.body;
     title.appendChild(body);
 
@@ -77,57 +79,23 @@ window.onclick = function (event) { //onclick représente le gestionnaire d'év�
 
 //FORMULAIRE EVENEMENT
 
-let postArticle = document.querySelector('#submit');
-postArticle.addEventListener('click', function () {
-    let main = document.querySelector("main");
-    let title = document.querySelector("#title").value;
-    let body = document.querySelector("#body").value;
+let postArticle = document.querySelector('#submit'); // Sélection de la balise ayant l'id submit
+// console.log(postArticle)
+postArticle.addEventListener('click', function () { // création d'un événement au click sur le bouton ayant pour id submit
+    let main = document.querySelector("main"); //séléction du main
+    let title = document.querySelector("#title").value; // séléction de la valeur de l'id title
+    let body = document.querySelector("#body").value; // sélection de la valeur de l'id body
     console.log(title);
 
 
-    function addArticle(title, body) {
+    function addArticle(title, body) { // création d'une fonction addArticle prenant en paramètre title et body
         let post = {title: title, body: body};
-        return post;
+        return post; // on retourne un object ayant comme attributs title et body
     }
 
-    let post = addArticle(title, body);
+    let post = addArticle(title, body); // on met cette fonction dans une variable post pour pouvoir l'utiliser
 
-    let createArticle = createPost(post);
-    main.appendChild(createArticle);
+    let createArticle = createPost(post); // je fais appel à ma fonction createPost avec comme argument post, que je met dans la variable createArticle
+    main.appendChild(createArticle); // je crée un enfant createArticle à mon main (à la suite de mes posts provenant de l'API)
 });
 
-// FORMULAIRE
-// function ajout(element){
-//     let formulaire = document.formulaireDynamque;
-//     // On clone le bouton d'ajout
-//     let ajout = element.cloneNode(true);
-//     // Crée un nouvel élément de type "input"
-//     let champ = document.createElement("input");
-//     // Les valeurs encodée dans le formulaire seront stockées dans un tableau
-//     champ.name = "champs[]";
-//     champ.type = "text";
-//
-//     let sup = document.createElement("input");
-//     sup.value = "supprimer un champ";
-//     sup.type = "button";
-//     // Ajout de l'événement onclick
-//     sup.onclick = function onclick(event)
-//     {suppression(this);};
-//
-//     // On crée un nouvel élément de type "p" et on insère le champ l'intérieur.
-//     let bloc = document.createElement("p");
-//     bloc.appendChild(champ);
-//     formulaire.insertBefore(ajout, element);
-//     formulaire.insertBefore(sup, element);
-//     formulaire.insertBefore(bloc, element);
-// }
-//
-// function suppression(element){
-//     var formulaire = document.formulaireDynamque;
-//     // Supprime le bouton d'ajout
-//     formulaire.removeChild(element.previousSibling);
-//     // Supprime le champ
-//     formulaire.removeChild(element.nextSibling);
-//     // Supprime le bouton de suppression
-//     formulaire.removeChild(element);
-// }
