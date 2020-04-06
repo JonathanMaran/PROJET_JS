@@ -100,7 +100,3 @@ postArticle.addEventListener('click', function () { // création d'un événemen
 });
 
 
-/* --------------------------------------*/
-
-/*GALLEry*/
-

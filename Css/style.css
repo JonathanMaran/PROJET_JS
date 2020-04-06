@@ -173,32 +173,13 @@ footer {
 /* GALLERY
  */
 
-/* The grid: Four equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
+/*.displayed-img {*/
+/*    width: 33%;*/
+/*}*/
+/*.mosaic-selector {*/
+/*    width: 33%;*/
+/*}*/
 
-/* Style the images inside the grid */
-.column img {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.column img:hover {
-    opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* --------------------------------------------------*/
-
-
-/* GALLERY */
+/*.list-selector {*/
+/*    width: 85%;*/
+/*}*/
