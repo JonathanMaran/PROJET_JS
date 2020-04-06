@@ -182,3 +182,7 @@ footer {
     align-items: center;
 }
 
+#form-image {
+    display: none;
+}
+
