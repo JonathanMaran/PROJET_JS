@@ -20,7 +20,7 @@ function createPost(dataPost) {
     section.style.backgroundColor = "red";
     const title = document.createElement("h2");
     title.style.color = "black";
-    title.className = "title"
+    title.className = "title";
     title.innerHTML = dataPost.title.toUpperCase(); // insérer le titre en maj de notre API dans la balise h2 de notre code html
     section.appendChild(title); // ajoute un noeud enfant h2 à ma section
     const body = document.createElement("div");
@@ -100,4 +100,7 @@ postArticle.addEventListener('click', function () { // création d'un événemen
 });
 
 
+/* --------------------------------------*/
+
+/*GALLEry*/
 
