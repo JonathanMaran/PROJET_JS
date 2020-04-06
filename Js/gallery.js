@@ -23,12 +23,12 @@ window.onclick = function (event) { //onclick représente le gestionnaire d'év�
 let mosaicButton = document.querySelector('#mosaic-button');
 mosaicButton.addEventListener('click', function (event) {
     let mosaic = document.querySelector('.full-img');
-    mosaic.style.columns = 6;
+    mosaic.style.columns = 3;
 });
 
 let listButton = document.querySelector('#list-button');
 listButton.addEventListener('click', function (list) {
     let koko = document.querySelector('.full-img');
-    koko.style.columns = '3';
+    koko.style.columns = 1;
 });
 

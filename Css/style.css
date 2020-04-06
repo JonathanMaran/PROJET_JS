@@ -169,17 +169,16 @@ footer {
     line-height: 50px;
 }
 
+.full-img {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 
-/* GALLERY
- */
+.displayed-img{
+    width:100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 
-/*.displayed-img {*/
-/*    width: 33%;*/
-/*}*/
-/*.mosaic-selector {*/
-/*    width: 33%;*/
-/*}*/
-
-/*.list-selector {*/
-/*    width: 85%;*/
-/*}*/
