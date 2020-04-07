@@ -62,7 +62,8 @@ $(document).ready(function () {
 
 let postArticle = document.querySelector('#submit'); // Sélection de la balise ayant l'id submit
 // console.log(postArticle)
-postArticle.addEventListener('click', function () { // création d'un événement au click sur le bouton ayant pour id submit
+postArticle.addEventListener('click', function (event) {// création d'un événement au click sur le bouton ayant pour id submit
+    event.preventDefault();
     let main = document.querySelector("main"); //séléction du main
     let title = document.querySelector("#title").value; // séléction de la valeur de l'id title
     let body = document.querySelector("#body").value; // sélection de la valeur de l'id body
