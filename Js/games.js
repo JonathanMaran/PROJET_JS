@@ -93,6 +93,14 @@ function playGame() {
 // L'utilisateur sélectionne une action
 let choixUtilisateur = document.querySelector('.game');
 choixUtilisateur.addEventListener('click', function (event) {
+
+    // cette condition me permet de supprimer ma précédente action (si je fais pierre au tour 1, au deuxième tour, mon action 1 est remplacée par l'action 2
+    if (document.querySelector('#userChoice img') != null) {
+        let divRemove = document.querySelector('#userChoice img');
+        divRemove.remove();
+    }
+
+    // Affichage de mon choix dans la div userChoice
     if (event.target.classList.contains('pierre')) {
         let pierre = document.querySelector('.pierre');
         console.log(pierre);
@@ -124,3 +132,6 @@ choixUtilisateur.addEventListener('click', function (event) {
         parentChoix.appendChild(image);
     }
 });
+
+
+
