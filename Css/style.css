@@ -197,3 +197,23 @@ footer {
     flex-wrap: nowrap;
     justify-content: center;
 }
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#userChoice {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+}
+
+#computer {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}

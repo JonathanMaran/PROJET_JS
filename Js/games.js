@@ -18,29 +18,34 @@ function getUserChoice(userInput) {
 /* récupérer le choix du programme
  */
 
-function getComputerChoice() {
-    function getRandomInt(min, max) {
-        min = Math.ceil(1);
-        max = Math.floor(4);
-        return Math.floor(Math.random() * (4 - 1)) + 1;
-    }
-
-    computerChoice = getRandomInt();
-    if (computerChoice === 1) {
-        computerChoice = 'rock';
-        // console.log(computerChoice);
-        return computerChoice;
-
-    } else if (computerChoice === 2) {
-        computerChoice = 'paper';
-        // console.log(computerChoice);
-        return computerChoice;
-    } else {
-        computerChoice = 'scissors';
-        // console.log(computerChoice);
-        return computerChoice;
-    }
-}
+// function getComputerChoice() {
+//     function getRandomInt(min, max) {
+//         min = Math.ceil(1);
+//         max = Math.floor(4);
+//         return Math.floor(Math.random() * (4 - 1)) + 1;
+//     }
+//
+//     computerChoice = getRandomInt();
+//     if (computerChoice === 1) {
+//         computerChoice = 'rock';
+//         // console.log(computerChoice);
+//         let parentChoix = document.querySelector('#computer');
+//         let image = document.createElement('img');
+//         let urlImage = './Images/pierre.png';
+//         image.src = urlImage;
+//         parentChoix.appendChild(image);
+//         return image;
+//
+//     } else if (computerChoice === 2) {
+//         computerChoice = 'paper';
+//         // console.log(computerChoice);
+//         return computerChoice;
+//     } else {
+//         computerChoice = 'scissors';
+//         // console.log(computerChoice);
+//         return computerChoice;
+//     }
+// }
 
 /* comparer les choix /*
  */
@@ -84,8 +89,6 @@ function playGame() {
     console.log(determineWinner(uChoice, cChoice))
 }
 
-(playGame());
-
 
 /* INTERFACE GRAPHIQUE DU JEU
  */
@@ -99,6 +102,10 @@ choixUtilisateur.addEventListener('click', function (event) {
         let divRemove = document.querySelector('#userChoice img');
         divRemove.remove();
     }
+    if (document.querySelector('#computer img') != null) {
+        let divRemove = document.querySelector('#computer img');
+        divRemove.remove();
+    }
 
     // Affichage de mon choix dans la div userChoice
     if (event.target.classList.contains('pierre')) {
@@ -110,6 +117,8 @@ choixUtilisateur.addEventListener('click', function (event) {
         let urlImage = './Images/pierre.png';
         image.src = urlImage;
         parentChoix.appendChild(image);
+        // userChoice = 'pierre';
+        // return userChoice;
     }
     if (event.target.classList.contains('feuille')) {
         let feuille = document.querySelector('.feuille');
@@ -120,6 +129,8 @@ choixUtilisateur.addEventListener('click', function (event) {
         let urlImage = './Images/feuille.png';
         image.src = urlImage;
         parentChoix.appendChild(image);
+        // userChoice = 'feuille';
+        // return userChoice;
     }
     if (event.target.classList.contains('ciseaux')) {
         let ciseaux = document.querySelector('.ciseaux');
@@ -130,8 +141,49 @@ choixUtilisateur.addEventListener('click', function (event) {
         let urlImage = './Images/ciseaux.png';
         image.src = urlImage;
         parentChoix.appendChild(image);
+        // userChoice = 'ciseaux';
+        // return userChoice;
     }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(1);
+        max = Math.floor(4);
+        return Math.floor(Math.random() * (4 - 1)) + 1;
+    }
+
+    computerChoice = getRandomInt();
+    if (computerChoice === 1) {
+        computerChoice = 'rock';
+        // console.log(computerChoice);
+        let parentChoix = document.querySelector('#computer');
+        let image = document.createElement('img');
+        let urlImage = './Images/pierre.png';
+        image.src = urlImage;
+        parentChoix.appendChild(image);
+        return computerChoice;
+
+    } else if (computerChoice === 2) {
+        computerChoice = 'paper';
+        let parentChoix = document.querySelector('#computer');
+        let image = document.createElement('img');
+        let urlImage = './Images/feuille.png';
+        image.src = urlImage;
+        parentChoix.appendChild(image);
+        return computerChoice;
+    } else {
+        computerChoice = 'scissors';
+        let parentChoix = document.querySelector('#computer');
+        let image = document.createElement('img');
+        let urlImage = './Images/ciseaux.png';
+        image.src = urlImage;
+        parentChoix.appendChild(image);
+        return computerChoice;
+    }
+
+    // determineWinner(userChoice, computerChoice);
+
 });
 
 
-
+// getComputerChoice();
+// console.log(computerChoice);
